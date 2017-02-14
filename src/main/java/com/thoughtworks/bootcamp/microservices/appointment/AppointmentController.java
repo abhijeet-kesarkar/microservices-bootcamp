@@ -1,5 +1,7 @@
 package com.thoughtworks.bootcamp.microservices.appointment;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
@@ -11,8 +13,10 @@ import java.net.URI;
  */
 @RestController
 @RequestMapping(value = "/doctors/{doctorId}/slots/{slotId}/appointment")
+@Api("Appointment api")
 public class AppointmentController {
 
+    @ApiOperation(httpMethod = "PUT", value = "Book Appointment")
     @RequestMapping(method = RequestMethod.PUT)
     public ResponseEntity<Appointment> bookAppointment(
             @PathVariable("doctorId") String doctorId,

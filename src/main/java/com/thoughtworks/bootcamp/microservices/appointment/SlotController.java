@@ -1,6 +1,7 @@
 package com.thoughtworks.bootcamp.microservices.appointment;
 
 import com.thoughtworks.bootcamp.microservices.appointment.Slot;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -14,6 +15,7 @@ import java.util.List;
 public class SlotController {
 
 
+    @ApiOperation(httpMethod = "GET", value = "Find Slots")
     @RequestMapping(method = RequestMethod.GET)
     public List<Slot> findSlot(@PathVariable("doctorId") String doctor, @RequestParam( value = "date", required = false) String date){
 

@@ -1,4 +1,4 @@
-package com.thoughtworks.bootcamp.microservices;
+package com.thoughtworks.bootcamp.microservices.config;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
